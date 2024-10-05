@@ -6,7 +6,8 @@ authors = ["Dmitri"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.12.5"
+python = "3.8.10"
+robotframework = "^7.1"
 
 
 [build-system]
