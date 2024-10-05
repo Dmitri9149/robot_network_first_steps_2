@@ -13,5 +13,7 @@ poetry config virtualenvs.in-project true
 Initialize project with 
 ```
 poetry init
+poetry add robotframework
+pip install --upgrade robotframework-seleniumlibrary
 ```
 
