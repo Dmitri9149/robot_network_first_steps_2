@@ -1,29 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T16:42:47.949016" rpa="false" schemaversion="5">
-<suite id="s1" name="Page Navigation" source="/home/dmitri/robot_frameworks/intro_robot_framework/Page_Navigation_and_Variables/page_navigation.robot">
-<kw name="Navigate To Page" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-06T16:42:48.208475" level="INFO">Opening browser 'Chrome' to base url 'http://inv.beaufortfairmont.com'.</msg>
-<arg>${SiteUrl}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-06T16:42:48.208186" elapsed="5.314240"/>
+<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T16:53:00.228834" rpa="false" schemaversion="5">
+<suite id="s1" name="Cons Log With Variables" source="/home/dmitri/robot_frameworks/intro_robot_framework/Page_Navigation_and_Variables/cons_log_with_variables.robot">
+<test id="s1-t1" name="Using Variables" line="9">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nMy name is ${name}. My favorite color is ${color}. My favorite sport is ${sport}.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T16:53:00.247330" elapsed="0.000483"/>
 </kw>
-<status status="PASS" start="2024-10-06T16:42:48.207418" elapsed="5.315786"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-06T16:53:00.248506" level="INFO">${name} = Dmitri</msg>
+<var>${name}</var>
+<arg>Dmitri</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-06T16:53:00.248235" elapsed="0.000302"/>
 </kw>
-<test id="s1-t1" name="Use_Variables_And_Navigate_to_Page" line="7">
-<kw name="Comment" owner="BuiltIn">
-<arg>Use Variables In Navigation</arg>
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" start="2024-10-06T16:42:53.525379" elapsed="0.000352"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-06T16:53:00.248949" level="INFO">${color} = Green</msg>
+<var>${color}</var>
+<arg>Green</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-06T16:53:00.248829" elapsed="0.000138"/>
 </kw>
-<status status="PASS" start="2024-10-06T16:42:53.523922" elapsed="0.002598"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-06T16:53:00.249253" level="INFO">${sport} = Yoga</msg>
+<var>${sport}</var>
+<arg>Yoga</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-06T16:53:00.249118" elapsed="0.000158"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nMy name is ${name}. My favorite color is ${color}. My favorite sport is ${sport}.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T16:53:00.249449" elapsed="0.000265"/>
+</kw>
+<status status="PASS" start="2024-10-06T16:53:00.246441" elapsed="0.003522"/>
 </test>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-06T16:42:53.528155" elapsed="0.118467"/>
-</kw>
-<status status="PASS" start="2024-10-06T16:42:47.950170" elapsed="5.696588"/>
+<status status="PASS" start="2024-10-06T16:53:00.229837" elapsed="0.020536"/>
 </suite>
 <statistics>
 <total>
@@ -32,7 +44,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Page Navigation">Page Navigation</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cons Log With Variables">Cons Log With Variables</stat>
 </suite>
 </statistics>
 <errors>
