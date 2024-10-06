@@ -14,6 +14,6 @@ Initialize project with
 ```
 poetry init
 poetry add robotframework
-pip install --upgrade robotframework-seleniumlibrary
+poetry add robotframework-seleniumlibrary
 ```
 
