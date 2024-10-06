@@ -1,37 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T11:42:14.063917" rpa="false" schemaversion="5">
-<suite id="s1" name="Check Invoice" source="/home/dmitri/robot_frameworks/intro_robot_framework/Keywords/check_invoice.robot">
-<test id="s1-t1" name="Check invoice manager page" line="6">
-<kw name="Comment" owner="BuiltIn">
-<arg>Learn how to check invoice manager page</arg>
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" start="2024-10-06T11:42:14.226648" elapsed="0.000307"/>
+<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T12:25:48.913817" rpa="false" schemaversion="5">
+<suite id="s1" name="Print Profile" source="/home/dmitri/robot_frameworks/intro_robot_framework/Keywords/print_profile.robot">
+<test id="s1-t1" name="My Way To Print Profile" line="4">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-06T12:25:48.931442" level="INFO">${first} = Dmitri</msg>
+<var>${first}</var>
+<arg>Dmitri</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-06T12:25:48.931219" elapsed="0.000258"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-06T11:42:14.227939" level="INFO">Opening browser 'chrome' to base url 'http://inv.beaufortfairmont.com/'.</msg>
-<arg>http://inv.beaufortfairmont.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-06T11:42:14.227556" elapsed="4.519695"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-06T12:25:48.931837" level="INFO">${last} = Dmitri</msg>
+<var>${last}</var>
+<arg>Dmitri</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-06T12:25:48.931695" elapsed="0.000161"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-06T11:42:18.771539" level="INFO">Current page contains text 'Invoice Manager'.</msg>
-<arg>Invoice Manager</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-06T11:42:18.748031" elapsed="0.023803"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-06T12:25:48.932137" level="INFO">${title} = title</msg>
+<var>${title}</var>
+<arg>title</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-06T12:25:48.932023" elapsed="0.000132"/>
 </kw>
-<kw name="My Log To Console">
+<kw name="Print Profile">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Invoice page checking !!</arg>
+<arg>\nProfile!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T11:42:18.773664" elapsed="0.000446"/>
+<status status="PASS" start="2024-10-06T12:25:48.932773" elapsed="0.000166"/>
 </kw>
-<status status="PASS" start="2024-10-06T11:42:18.772735" elapsed="0.001538"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>First Name: "${firstName}"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T12:25:48.933037" elapsed="0.000194"/>
 </kw>
-<status status="PASS" start="2024-10-06T11:42:14.225193" elapsed="4.549471"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Last Name: "${lastName}"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T12:25:48.933327" elapsed="0.000182"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Title: "${title}"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T12:25:48.933600" elapsed="0.000165"/>
+</kw>
+<arg>${first}</arg>
+<arg>${last}</arg>
+<arg>${title}</arg>
+<status status="PASS" start="2024-10-06T12:25:48.932414" elapsed="0.001416"/>
+</kw>
+<status status="PASS" start="2024-10-06T12:25:48.930401" elapsed="0.003594"/>
 </test>
-<doc>Learn how to check invoice manager page</doc>
-<status status="PASS" start="2024-10-06T11:42:14.065036" elapsed="4.710417"/>
+<status status="PASS" start="2024-10-06T12:25:48.914808" elapsed="0.019619"/>
 </suite>
 <statistics>
 <total>
@@ -40,7 +60,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Check Invoice">Check Invoice</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Print Profile">Print Profile</stat>
 </suite>
 </statistics>
 <errors>
