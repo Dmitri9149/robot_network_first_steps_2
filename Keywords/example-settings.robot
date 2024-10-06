@@ -1,5 +1,6 @@
 *** Settings ***
-Library  SeleniumLibrary
+Documentation    Learn how to create Keywords 
+Library           SeleniumLibrary
 
 
 *** Test Cases ***
