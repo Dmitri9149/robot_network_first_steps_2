@@ -1,62 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T16:09:58.279444" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Invoice Manager" source="/home/dmitri/robot_frameworks/intro_robot_framework/Page_Should_Contain/Test_Invoice_Manager.robot">
-<test id="s1-t1" name="Check invoice manager page" line="5">
+<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T16:42:47.949016" rpa="false" schemaversion="5">
+<suite id="s1" name="Page Navigation" source="/home/dmitri/robot_frameworks/intro_robot_framework/Page_Navigation_and_Variables/page_navigation.robot">
+<kw name="Navigate To Page" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-06T16:09:58.536049" level="INFO">Opening browser 'chrome' to base url 'http://inv.beaufortfairmont.com/'.</msg>
-<arg>http://inv.beaufortfairmont.com/</arg>
-<arg>chrome</arg>
+<msg time="2024-10-06T16:42:48.208475" level="INFO">Opening browser 'Chrome' to base url 'http://inv.beaufortfairmont.com'.</msg>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-06T16:09:58.535584" elapsed="5.333222"/>
+<status status="PASS" start="2024-10-06T16:42:48.208186" elapsed="5.314240"/>
 </kw>
+<status status="PASS" start="2024-10-06T16:42:48.207418" elapsed="5.315786"/>
+</kw>
+<test id="s1-t1" name="Use_Variables_And_Navigate_to_Page" line="7">
 <kw name="Comment" owner="BuiltIn">
-<arg>Checking that we're on the invoice manager page</arg>
+<arg>Use Variables In Navigation</arg>
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" start="2024-10-06T16:10:03.869572" elapsed="0.000304"/>
+<status status="PASS" start="2024-10-06T16:42:53.525379" elapsed="0.000352"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-06T16:10:03.906506" level="INFO">Current page contains text 'Invoice Manager'.</msg>
-<arg>Invoice Manager</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-06T16:10:03.870317" elapsed="0.036390"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-06T16:10:03.931154" level="INFO">Current page contains text 'Invoice Number'.</msg>
-<arg>Invoice Number</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-06T16:10:03.907071" elapsed="0.024240"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-06T16:10:03.952151" level="INFO">Current page contains text 'Company Name'.</msg>
-<arg>Company Name</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-06T16:10:03.931860" elapsed="0.020417"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-06T16:10:03.974583" level="INFO">Current page contains text 'Description'.</msg>
-<arg>Description</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-06T16:10:03.952600" elapsed="0.022429"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-10-06T16:10:04.115254" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-10-06T16:10:04.115533" level="FAIL">Page should have contained element '[(@class, ‘menu-icon’)]' but did not.</msg>
-<arg>[(@class, ‘menu-icon’)]</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="FAIL" start="2024-10-06T16:10:03.976717" elapsed="0.142918">Page should have contained element '[(@class, ‘menu-icon’)]' but did not.</status>
-</kw>
-<status status="FAIL" start="2024-10-06T16:09:58.534343" elapsed="5.585738">Page should have contained element '[(@class, ‘menu-icon’)]' but did not.</status>
+<status status="PASS" start="2024-10-06T16:42:53.523922" elapsed="0.002598"/>
 </test>
-<status status="FAIL" start="2024-10-06T16:09:58.280538" elapsed="5.840306"/>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-06T16:42:53.528155" elapsed="0.118467"/>
+</kw>
+<status status="PASS" start="2024-10-06T16:42:47.950170" elapsed="5.696588"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Test Invoice Manager">Test Invoice Manager</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Page Navigation">Page Navigation</stat>
 </suite>
 </statistics>
 <errors>
