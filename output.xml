@@ -1,66 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T12:25:48.913817" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T14:35:56.708805" rpa="false" schemaversion="5">
 <suite id="s1" name="Print Profile" source="/home/dmitri/robot_frameworks/intro_robot_framework/Keywords/print_profile.robot">
 <test id="s1-t1" name="My Way To Print Profile" line="4">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-06T12:25:48.931442" level="INFO">${first} = Dmitri</msg>
+<msg time="2024-10-06T14:35:56.727159" level="INFO">${first} = Dmitri</msg>
 <var>${first}</var>
 <arg>Dmitri</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-06T12:25:48.931219" elapsed="0.000258"/>
+<status status="PASS" start="2024-10-06T14:35:56.726930" elapsed="0.000261"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-06T12:25:48.931837" level="INFO">${last} = Dmitri</msg>
+<msg time="2024-10-06T14:35:56.727605" level="INFO">${last} = Dmitri</msg>
 <var>${last}</var>
 <arg>Dmitri</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-06T12:25:48.931695" elapsed="0.000161"/>
+<status status="PASS" start="2024-10-06T14:35:56.727462" elapsed="0.000170"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-06T12:25:48.932137" level="INFO">${title} = title</msg>
+<msg time="2024-10-06T14:35:56.728020" level="INFO">${title} = title</msg>
 <var>${title}</var>
 <arg>title</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-06T12:25:48.932023" elapsed="0.000132"/>
+<status status="PASS" start="2024-10-06T14:35:56.727868" elapsed="0.000173"/>
+</kw>
+<kw name="Change Value">
+<return>
+<value>${new}</value>
+<status status="PASS" start="2024-10-06T14:35:56.728681" elapsed="0.000040"/>
+</return>
+<arg>${title}</arg>
+<arg>New Title</arg>
+<status status="PASS" start="2024-10-06T14:35:56.728361" elapsed="0.000463"/>
 </kw>
 <kw name="Print Profile">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nProfile!</arg>
+<arg>\nPROFILE</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T12:25:48.932773" elapsed="0.000166"/>
+<status status="PASS" start="2024-10-06T14:35:56.729469" elapsed="0.000197"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>First Name: "${firstName}"</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T12:25:48.933037" elapsed="0.000194"/>
+<status status="PASS" start="2024-10-06T14:35:56.729816" elapsed="0.000311"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Last Name: "${lastName}"</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T12:25:48.933327" elapsed="0.000182"/>
+<status status="PASS" start="2024-10-06T14:35:56.730283" elapsed="0.000228"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Title: "${title}"</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T12:25:48.933600" elapsed="0.000165"/>
+<status status="PASS" start="2024-10-06T14:35:56.730656" elapsed="0.000247"/>
 </kw>
 <arg>${first}</arg>
 <arg>${last}</arg>
 <arg>${title}</arg>
-<status status="PASS" start="2024-10-06T12:25:48.932414" elapsed="0.001416"/>
+<status status="PASS" start="2024-10-06T14:35:56.729093" elapsed="0.001886"/>
 </kw>
-<status status="PASS" start="2024-10-06T12:25:48.930401" elapsed="0.003594"/>
+<status status="PASS" start="2024-10-06T14:35:56.726156" elapsed="0.005010"/>
 </test>
-<status status="PASS" start="2024-10-06T12:25:48.914808" elapsed="0.019619"/>
+<test id="s1-t2" name="My Addition" line="10">
+<kw name="Add">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-06T14:35:56.732883" level="INFO">${value} = 5</msg>
+<var>${value}</var>
+<arg>${value1} + ${value2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-06T14:35:56.732539" elapsed="0.000390"/>
+</kw>
+<return>
+<value>${value}</value>
+<status status="PASS" start="2024-10-06T14:35:56.733027" elapsed="0.000048"/>
+</return>
+<msg time="2024-10-06T14:35:56.733226" level="INFO">${sum} = 5</msg>
+<var>${sum}</var>
+<arg>2</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-10-06T14:35:56.732017" elapsed="0.001229"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-10-06T14:35:56.734288" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<arg>5</arg>
+<arg>${sum}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-10-06T14:35:56.733870" elapsed="0.000528"/>
+</kw>
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<kw name="Addition">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-06T14:35:56.735749" level="FAIL">Evaluating expression '5' failed: ValueError: dictionary update sequence element #0 has length 1; 2 is required</msg>
+<var>${value}</var>
+<arg>${first}</arg>
+<arg>+</arg>
+<arg>${second}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="FAIL" start="2024-10-06T14:35:56.735437" elapsed="0.000398">Evaluating expression '5' failed: ValueError: dictionary update sequence element #0 has length 1; 2 is required</status>
+</kw>
+<return>
+<value>${value}</value>
+<status status="NOT RUN" start="2024-10-06T14:35:56.735923" elapsed="0.000018"/>
+</return>
+<arg>5</arg>
+<arg>5</arg>
+<status status="FAIL" start="2024-10-06T14:35:56.735122" elapsed="0.000918">Evaluating expression '5' failed: ValueError: dictionary update sequence element #0 has length 1; 2 is required</status>
+</kw>
+<arg>Evaluating expression '5' failed: ValueError: dictionary update sequence element #0 has length 1; 2 is required</arg>
+<arg>Addition</arg>
+<arg>5</arg>
+<arg>5</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="PASS" start="2024-10-06T14:35:56.734814" elapsed="0.001615"/>
+</kw>
+<status status="PASS" start="2024-10-06T14:35:56.731427" elapsed="0.005378"/>
+</test>
+<status status="PASS" start="2024-10-06T14:35:56.709807" elapsed="0.027601"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Print Profile">Print Profile</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Print Profile">Print Profile</stat>
 </suite>
 </statistics>
 <errors>
