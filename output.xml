@@ -1,131 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T14:35:56.708805" rpa="false" schemaversion="5">
-<suite id="s1" name="Print Profile" source="/home/dmitri/robot_frameworks/intro_robot_framework/Keywords/print_profile.robot">
-<test id="s1-t1" name="My Way To Print Profile" line="4">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-06T14:35:56.727159" level="INFO">${first} = Dmitri</msg>
-<var>${first}</var>
-<arg>Dmitri</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.726930" elapsed="0.000261"/>
+<robot generator="Robot 7.1 (Python 3.8.10 on linux)" generated="2024-10-06T16:09:58.279444" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Invoice Manager" source="/home/dmitri/robot_frameworks/intro_robot_framework/Page_Should_Contain/Test_Invoice_Manager.robot">
+<test id="s1-t1" name="Check invoice manager page" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-06T16:09:58.536049" level="INFO">Opening browser 'chrome' to base url 'http://inv.beaufortfairmont.com/'.</msg>
+<arg>http://inv.beaufortfairmont.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-06T16:09:58.535584" elapsed="5.333222"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-06T14:35:56.727605" level="INFO">${last} = Dmitri</msg>
-<var>${last}</var>
-<arg>Dmitri</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.727462" elapsed="0.000170"/>
+<kw name="Comment" owner="BuiltIn">
+<arg>Checking that we're on the invoice manager page</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2024-10-06T16:10:03.869572" elapsed="0.000304"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-06T14:35:56.728020" level="INFO">${title} = title</msg>
-<var>${title}</var>
-<arg>title</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.727868" elapsed="0.000173"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T16:10:03.906506" level="INFO">Current page contains text 'Invoice Manager'.</msg>
+<arg>Invoice Manager</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T16:10:03.870317" elapsed="0.036390"/>
 </kw>
-<kw name="Change Value">
-<return>
-<value>${new}</value>
-<status status="PASS" start="2024-10-06T14:35:56.728681" elapsed="0.000040"/>
-</return>
-<arg>${title}</arg>
-<arg>New Title</arg>
-<status status="PASS" start="2024-10-06T14:35:56.728361" elapsed="0.000463"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T16:10:03.931154" level="INFO">Current page contains text 'Invoice Number'.</msg>
+<arg>Invoice Number</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T16:10:03.907071" elapsed="0.024240"/>
 </kw>
-<kw name="Print Profile">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nPROFILE</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.729469" elapsed="0.000197"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T16:10:03.952151" level="INFO">Current page contains text 'Company Name'.</msg>
+<arg>Company Name</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T16:10:03.931860" elapsed="0.020417"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>First Name: "${firstName}"</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.729816" elapsed="0.000311"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T16:10:03.974583" level="INFO">Current page contains text 'Description'.</msg>
+<arg>Description</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T16:10:03.952600" elapsed="0.022429"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Last Name: "${lastName}"</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.730283" elapsed="0.000228"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-06T16:10:04.115254" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-06T16:10:04.115533" level="FAIL">Page should have contained element '[(@class, ‘menu-icon’)]' but did not.</msg>
+<arg>[(@class, ‘menu-icon’)]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2024-10-06T16:10:03.976717" elapsed="0.142918">Page should have contained element '[(@class, ‘menu-icon’)]' but did not.</status>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Title: "${title}"</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.730656" elapsed="0.000247"/>
-</kw>
-<arg>${first}</arg>
-<arg>${last}</arg>
-<arg>${title}</arg>
-<status status="PASS" start="2024-10-06T14:35:56.729093" elapsed="0.001886"/>
-</kw>
-<status status="PASS" start="2024-10-06T14:35:56.726156" elapsed="0.005010"/>
+<status status="FAIL" start="2024-10-06T16:09:58.534343" elapsed="5.585738">Page should have contained element '[(@class, ‘menu-icon’)]' but did not.</status>
 </test>
-<test id="s1-t2" name="My Addition" line="10">
-<kw name="Add">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-10-06T14:35:56.732883" level="INFO">${value} = 5</msg>
-<var>${value}</var>
-<arg>${value1} + ${value2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.732539" elapsed="0.000390"/>
-</kw>
-<return>
-<value>${value}</value>
-<status status="PASS" start="2024-10-06T14:35:56.733027" elapsed="0.000048"/>
-</return>
-<msg time="2024-10-06T14:35:56.733226" level="INFO">${sum} = 5</msg>
-<var>${sum}</var>
-<arg>2</arg>
-<arg>3</arg>
-<status status="PASS" start="2024-10-06T14:35:56.732017" elapsed="0.001229"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2024-10-06T14:35:56.734288" level="INFO">Argument types are:
-&lt;class 'str'&gt;
-&lt;class 'int'&gt;</msg>
-<arg>5</arg>
-<arg>${sum}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.733870" elapsed="0.000528"/>
-</kw>
-<kw name="Run Keyword And Expect Error" owner="BuiltIn">
-<kw name="Addition">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-10-06T14:35:56.735749" level="FAIL">Evaluating expression '5' failed: ValueError: dictionary update sequence element #0 has length 1; 2 is required</msg>
-<var>${value}</var>
-<arg>${first}</arg>
-<arg>+</arg>
-<arg>${second}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="FAIL" start="2024-10-06T14:35:56.735437" elapsed="0.000398">Evaluating expression '5' failed: ValueError: dictionary update sequence element #0 has length 1; 2 is required</status>
-</kw>
-<return>
-<value>${value}</value>
-<status status="NOT RUN" start="2024-10-06T14:35:56.735923" elapsed="0.000018"/>
-</return>
-<arg>5</arg>
-<arg>5</arg>
-<status status="FAIL" start="2024-10-06T14:35:56.735122" elapsed="0.000918">Evaluating expression '5' failed: ValueError: dictionary update sequence element #0 has length 1; 2 is required</status>
-</kw>
-<arg>Evaluating expression '5' failed: ValueError: dictionary update sequence element #0 has length 1; 2 is required</arg>
-<arg>Addition</arg>
-<arg>5</arg>
-<arg>5</arg>
-<doc>Runs the keyword and checks that the expected error occurred.</doc>
-<status status="PASS" start="2024-10-06T14:35:56.734814" elapsed="0.001615"/>
-</kw>
-<status status="PASS" start="2024-10-06T14:35:56.731427" elapsed="0.005378"/>
-</test>
-<status status="PASS" start="2024-10-06T14:35:56.709807" elapsed="0.027601"/>
+<status status="FAIL" start="2024-10-06T16:09:58.280538" elapsed="5.840306"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Print Profile">Print Profile</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Invoice Manager">Test Invoice Manager</stat>
 </suite>
 </statistics>
 <errors>
